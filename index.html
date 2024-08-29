@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sixth Man Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hoverable-item {
+            position: relative;
+            display: inline-block;
+        }
+        .hoverable-text {
+            text-decoration: underline;
+            color: #2563eb;
+            cursor: pointer;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+        .hoverable-item:hover .hoverable-text {
+            transform: rotate(5deg);
+        }
+        .hoverable-content {
+            position: absolute;
+            z-index: 10;
+            width: 16rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s;
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1rem;
+            margin-top: -0.5rem;
+            margin-left: -8rem;
+        }
+        .hoverable-item:hover .hoverable-content {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-[#f5e6d3]">
+    <div class="max-w-2xl mx-auto p-6 text-center">
+        <h1 class="text-3xl font-bold mb-6">Sixth Man Consulting</h1>
+        <p class="text-lg leading-relaxed">
+            We're <span class="hoverable-item">
+                <span class="hoverable-text">financial operations partners</span>
+                <span class="hoverable-content">We offer comprehensive financial operations, bookkeeping, and accounting services to empower your decision-making and fuel sustainable growth.</span>
+            </span> for <span class="hoverable-item">
+                <span class="hoverable-text">growing businesses</span>
+                <span class="hoverable-content">We work with companies making $500,000 to $20 million in annual revenue, with 2-20 employees, at various stages from startups to established businesses.</span>
+            </span> in and around the <span class="hoverable-item">
+                <span class="hoverable-text">consumer product landscape</span>
+                <span class="hoverable-content">We specialize in CPG categories including food & beverage, personal care, household products, and beauty, covering both perishables and non-perishables.</span>
+            </span>. Think food, drinks, beauty stuff – you name it! We bring a <span class="hoverable-item">
+                <span class="hoverable-text">complete financial toolkit</span>
+                <span class="hoverable-content">Our core services include bookkeeping, accounts payable/receivable, cash flow planning, and budget planning.</span>
+            </span> to the table, helping you crunch those numbers and make smart money moves. With our <span class="hoverable-item">
+                <span class="hoverable-text">tailored solutions</span>
+                <span class="hoverable-content">We offer flexible packages starting at $3,400/month, scalable to your needs.</span>
+            </span>, we're here to be your sidekick in conquering the business world. Let's make your financial game as strong as your product game!
+        </p>
+    </div>
+</body>
+</html>
