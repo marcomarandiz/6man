@@ -12,55 +12,100 @@
         }
         .hoverable-text {
             text-decoration: underline;
-            color: #2563eb;
+            text-decoration-color: black;
+            color: #ff2044;
             cursor: pointer;
             display: inline-block;
-            transition: transform 0.2s;
+            transition: transform 0.05s;
+            font-weight: 500; /* Added to make links medium weight */
         }
         .hoverable-item:hover .hoverable-text {
-            transform: rotate(5deg);
+            transform: rotate(2deg);
         }
         .hoverable-content {
             position: absolute;
             z-index: 10;
-            width: 16rem;
+            width: 24rem; /* Changed from 16rem to 24rem (50% increase) */
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.2s;
-            background-color: white;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            background-color: #f5e6d3;
+            border: 1px solid #000;
             padding: 1rem;
-            margin-top: -0.5rem;
-            margin-left: -8rem;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 0.5rem;
         }
         .hoverable-item:hover .hoverable-content {
             opacity: 1;
         }
+        .new-amsterdam-text {
+            font-family: 'New Amsterdam', cursive;
+        }
+        .work-sans-medium {
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 500;
+        }
+        .work-sans-regular {
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 500;
+        }
+        .cta-button {
+            background-color: #ff2044;
+            color: white;
+            border: 2px solid black;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
     <link rel="canonical" href="https://www.sixthman.consulting" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body class="min-h-screen flex items-center justify-center bg-[#f5e6d3]">
     <div class="max-w-2xl mx-auto p-6 text-center">
-        <h1 class="text-3xl font-bold mb-6">Sixth Man Consulting</h1>
-        <p class="text-lg leading-relaxed">
+        <img src="6manlogo.png" alt="Sixth Man Consulting Logo" class="w-96 h-96 mx-auto mb-6">
+        
+        <div class="mb-6 text-left bg-white p-4 rounded-lg shadow-md border border-gray-300">
+            <p class="font-serif">
+                <span class="font-bold">sixth man</span> <span class="text-gray-600 italic">/sɪksθ mæn/</span> <span class="text-sm">n.</span> (pl. <span class="italic">sixth men</span>)
+            </p>
+            <p class="mt-2 text-sm">
+                <span class="font-bold">Fig.</span> Any person who plays a crucial supporting role while not being in the spotlight; an important contributor who operates behind the scenes or in a secondary capacity.
+            </p>
+        </div>
+
+        <p class="text-base leading-relaxed work-sans-regular">
             We're <span class="hoverable-item">
                 <span class="hoverable-text">financial operations partners</span>
                 <span class="hoverable-content">We offer comprehensive financial operations, bookkeeping, and accounting services to empower your decision-making and fuel sustainable growth.</span>
             </span> for <span class="hoverable-item">
                 <span class="hoverable-text">growing businesses</span>
-                <span class="hoverable-content">We work with companies making $500,000 to $20 million in annual revenue, with 2-20 employees, at various stages from startups to established businesses.</span>
+                <span class="hoverable-content">We work with startups and established businesses, up to $20 million in annual revenue.</span>
             </span> in and around the <span class="hoverable-item">
                 <span class="hoverable-text">consumer product landscape</span>
-                <span class="hoverable-content">We specialize in CPG categories including food & beverage, personal care, household products, and beauty, covering both perishables and non-perishables.</span>
-            </span>. Think food, drinks, beauty stuff – you name it! We bring a <span class="hoverable-item">
+                <span class="hoverable-content">We specialize in CPG categories including food & beverage, personal care, household products, and beauty.</span>
+            </span>. We bring a <span class="hoverable-item">
                 <span class="hoverable-text">complete financial toolkit</span>
-                <span class="hoverable-content">Our core services include bookkeeping, accounts payable/receivable, cash flow planning, and budget planning.</span>
-            </span> to the table, helping you crunch those numbers and make smart money moves. With our <span class="hoverable-item">
-                <span class="hoverable-text">tailored solutions</span>
-                <span class="hoverable-content">We offer flexible packages starting at $3,400/month, scalable to your needs.</span>
-            </span>, we're here to be your sidekick in conquering the business world. Let's make your financial game as strong as your product game!
+                <span class="hoverable-content">Our core services include bookkeeping, accounts payable/receivable, cashflow forecasting, and budget planning.</span>
+            </span> to the table, helping you make smart money moves. Start with <span class="hoverable-item">
+                <span class="hoverable-text">flexible packages</span>
+                <span class="hoverable-content">Starting at $3,400/month, with add-ons as needed.</span>
+            </span> today that will continue to fit your needs as you scale.
         </p>
+
+        <div class="mt-8">
+            <a href="#contact" class="cta-button work-sans-medium rounded-md inline-block">
+                Contact Us
+            </a>
+        </div>
     </div>
 </body>
 </html>
