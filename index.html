@@ -63,6 +63,10 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+        .hoverable-content.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
     </style>
     <link rel="canonical" href="https://www.sixthman.consulting" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,5 +111,27 @@
             </a>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hoverableItems = document.querySelectorAll('.hoverable-item');
+
+            hoverableItems.forEach(item => {
+                const content = item.querySelector('.hoverable-content');
+
+                item.addEventListener('touchstart', function(e) {
+                    e.preventDefault();
+                    content.classList.toggle('active');
+                });
+
+                // Close other active hovercards when tapping outside
+                document.addEventListener('touchstart', function(e) {
+                    if (!item.contains(e.target)) {
+                        content.classList.remove('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
