@@ -25,7 +25,7 @@
         .hoverable-content {
             position: absolute;
             z-index: 10;
-            width: 24rem; /* Changed from 16rem to 24rem (50% increase) */
+            width: 24rem;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.2s;
@@ -66,6 +66,25 @@
         .hoverable-content.active {
             opacity: 1;
             pointer-events: auto;
+        }
+
+        /* Add this media query for mobile devices */
+        @media (max-width: 640px) {
+            .hoverable-content {
+                position: fixed; /* Changed from absolute to fixed */
+                z-index: 10;
+                width: 24rem;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.2s;
+                background-color: #f5e6d3;
+                border: 1px solid #000;
+                padding: 1rem;
+                bottom: auto;
+                left: 50%;
+                transform: translate(-50%, -105%); /* Updated to center vertically and horizontally */
+                margin-bottom: 0;
+            }
         }
     </style>
     <link rel="canonical" href="https://www.sixthman.consulting" />
