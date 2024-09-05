@@ -86,6 +86,15 @@
                 margin-bottom: 0;
             }
         }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .bounce {
+            animation: bounce 0.5s ease;
+        }
     </style>
     <link rel="canonical" href="https://www.sixthman.consulting" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,6 +143,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const hoverableItems = document.querySelectorAll('.hoverable-item');
+            const ctaButton = document.querySelector('.cta-button');
 
             hoverableItems.forEach(item => {
                 const content = item.querySelector('.hoverable-content');
@@ -150,6 +160,14 @@
                     }
                 });
             });
+
+            // Add bounce animation for all screen sizes
+            setInterval(() => {
+                ctaButton.classList.add('bounce');
+                setTimeout(() => {
+                    ctaButton.classList.remove('bounce');
+                }, 500);
+            }, 8000);
         });
     </script>
 </body>
